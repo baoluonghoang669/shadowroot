@@ -1,0 +1,36 @@
+h1 {
+	color: green;
+	text-align: center;
+}
+
+p {
+	color: green;
+}
+
+.second-shadow {
+	border: 2px solid green;
+	padding: 20px;
+}
+
+img {
+	width: 100px;
+	height: 100px;
+}
+
+.scroll-element {
+	background-color: lightblue;
+	height: 220px;
+	width: 300px;
+	overflow: auto;
+}
+.scroll-element p {
+	height: 250px;
+	width: 400px;;
+	border: 1px solid red;
+}
+
+.custom-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
