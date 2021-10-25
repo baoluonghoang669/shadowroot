@@ -20,6 +20,8 @@ export class ThirdShadowComponent implements OnInit {
   resultChoices = [];
   resultText = '';
   resultTime= '';
+  resultDate = '';
+
   constructor(
     private formBuilder: FormBuilder
   ){}
@@ -30,7 +32,8 @@ export class ThirdShadowComponent implements OnInit {
       radio: [''],
       myChoices: this.formBuilder.array([]),
       text: [''],
-      time: ['']
+      time: [''],
+      date: ['']
     });
   }
 
@@ -52,6 +55,7 @@ export class ThirdShadowComponent implements OnInit {
     this.resultChoices = this.formThird.controls.myChoices.value;
     this.resultText = this.formThird.controls.text.value;
     this.resultTime = this.formThird.controls.time.value;
+    this.resultDate = this.formThird.controls.date.value;
   }
 
   onCheckChange(event: any) {

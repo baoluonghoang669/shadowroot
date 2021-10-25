@@ -19,7 +19,8 @@ export class AppComponent implements OnInit {
   resultRadio = '';
   resultChoices = [];
   resultText = '';
-  resultTime= '';
+  resultTime = '';
+  resultDate = '';
   constructor(
     private formBuilder: FormBuilder
   ){}
@@ -30,7 +31,8 @@ export class AppComponent implements OnInit {
       radio: [''],
       myChoices: this.formBuilder.array([]),
       text: [''],
-      time: ['']
+      time: [''],
+      date: ['']
     });
   }
 
@@ -52,6 +54,7 @@ export class AppComponent implements OnInit {
     this.resultChoices = this.form.controls.myChoices.value;
     this.resultText = this.form.controls.text.value;
     this.resultTime = this.form.controls.time.value;
+    this.resultDate = this.form.controls.date.value;
   }
 
   onCheckChange(event: any) {

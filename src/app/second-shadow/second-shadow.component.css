@@ -34,3 +34,8 @@ img {
 	justify-content: space-between;
 	align-items: center;
 }
+
+.mat-form-field-flex {
+	background-color: rgba(99, 99, 99, 0.04);
+	border-bottom: 1px solid #000;
+}

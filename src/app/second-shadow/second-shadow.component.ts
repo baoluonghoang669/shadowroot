@@ -20,6 +20,7 @@ export class SecondShadowComponent implements OnInit {
   resultChoices = [];
   resultText = '';
   resultTime= '';
+  resultDate = '';
   constructor(
     private formBuilder: FormBuilder
   ){}
@@ -30,7 +31,8 @@ export class SecondShadowComponent implements OnInit {
       radio: [''],
       myChoices: this.formBuilder.array([]),
       text: [''],
-      time: ['']
+      time: [''],
+      date: ['']
     });
   }
 
@@ -52,6 +54,7 @@ export class SecondShadowComponent implements OnInit {
     this.resultChoices = this.formSecond.controls.myChoices.value;
     this.resultText = this.formSecond.controls.text.value;
     this.resultTime = this.formSecond.controls.time.value;
+    this.resultDate = this.formSecond.controls.date.value;
   }
 
   onCheckChange(event: any) {
