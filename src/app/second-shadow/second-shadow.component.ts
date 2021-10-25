@@ -1,3 +1,4 @@
+import { FormControl, FormArray, FormBuilder, FormGroup } from '@angular/forms';
 import { Component, OnInit, ViewEncapsulation, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
@@ -7,21 +8,65 @@ import { Component, OnInit, ViewEncapsulation, ElementRef, ViewChild } from '@an
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class SecondShadowComponent implements OnInit {
+  @ViewChild('bold', {static: true}) bold: ElementRef;
+  formSecond: FormGroup;
+  checks: any = [
+    {description: 'Bike', value: 'bike'},
+    {description: "Car", value: 'car'},
+    {description: "Boat", value: 'boat'}
+  ];
+  resultCars = '';
+  resultRadio = '';
+  resultChoices = [];
+  resultText = '';
+  resultTime= '';
   constructor(
+    private formBuilder: FormBuilder
   ){}
 
   ngOnInit() {
+    this.formSecond = this.formBuilder.group({
+      cars: [''],
+      radio: [''],
+      myChoices: this.formBuilder.array([]),
+      text: [''],
+      time: ['']
+    });
   }
 
   onClick() {
-    alert('bạn đã click');
+    this.bold.nativeElement.innerText = 'The text is clicked'; 
   }
 
   over() {
-    alert('bạn đã hover');
+    this.bold.nativeElement.innerText = 'The text is hover'; 
   }
 
   onRightClick(event: MouseEvent) {
-    alert('bạn đã right click');
+    this.bold.nativeElement.innerText = 'The text is right click'; 
+  }
+
+  onSubmit() {
+    this.resultCars = this.formSecond.controls.cars.value;
+    this.resultRadio = this.formSecond.controls.radio.value;
+    this.resultChoices = this.formSecond.controls.myChoices.value;
+    this.resultText = this.formSecond.controls.text.value;
+    this.resultTime = this.formSecond.controls.time.value;
+  }
+
+  onCheckChange(event: any) {
+    const checkArray: FormArray = this.formSecond.get('myChoices') as FormArray;
+    if (event.target.checked) {
+      checkArray.push(new FormControl(event.target.value));
+    } else {
+      let i: number = 0;
+      checkArray.controls.forEach((item: any) => {
+        if (item.value == event.target.value) {
+          checkArray.removeAt(i);
+          return;
+        }
+        i++;
+      });
+    }
   }
 }

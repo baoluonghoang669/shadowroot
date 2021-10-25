@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,11 +11,12 @@ import { ThirdShadowComponent } from './third-shadow/third-shadow.component';
   declarations: [
     AppComponent,
     SecondShadowComponent,
-    ThirdShadowComponent
+    ThirdShadowComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
