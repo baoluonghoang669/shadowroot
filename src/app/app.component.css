@@ -5,6 +5,12 @@ header {
 	padding: 20px;
 }
 
+#logo {
+	color: green;
+	font-size: 25px;
+	margin-right: 10px;
+}
+
 .content {
 	padding: 20px;
 }
@@ -55,5 +61,11 @@ img {
 	border-bottom: 1px solid #000;
 }
 
+.link {
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	margin: 0 10px;
+}
 
 

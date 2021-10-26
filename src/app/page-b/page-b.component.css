@@ -1,0 +1,11 @@
+.custom-iframe {
+	width: 80%;
+	height: 600px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.custom-div {
+	margin: 0 auto;
+	text-align: center;
+}

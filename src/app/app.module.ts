@@ -11,11 +11,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { PageBComponent } from './page-b/page-b.component';
+import { PageCComponent } from './page-c/page-c.component';
+import { PageAComponent } from './page-a/page-a.component';
 @NgModule({
   declarations: [
     AppComponent,
     SecondShadowComponent,
     ThirdShadowComponent,
+    PageBComponent,
+    PageCComponent,
+    PageAComponent,
   ],
   imports: [
     BrowserModule,
