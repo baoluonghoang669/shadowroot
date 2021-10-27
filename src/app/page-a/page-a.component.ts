@@ -1,11 +1,12 @@
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { FormControl, FormArray } from '@angular/forms';
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-page-a',
   templateUrl: './page-a.component.html',
-  styleUrls: ['./page-a.component.css']
+  styleUrls: ['./page-a.component.css'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class PageAComponent implements OnInit {
   @ViewChild('bold', {static: true}) bold: ElementRef;
