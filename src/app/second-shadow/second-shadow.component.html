@@ -77,7 +77,11 @@
 			  <button (click)="onClick()">Click</button>
 			  <button (mouseover)='over()'>Hover</button>
 			  <button (contextmenu)="onRightClick($event)">Right Click</button>
+				<button (dblclick)="onDbClick()">Double Click</button>
 			</div>
+			<div class="example-box" cdkDrag>
+				Drag second shadow root      
+			  </div>
 		</div>
     <app-third-shadow></app-third-shadow>
 </div>

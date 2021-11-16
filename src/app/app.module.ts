@@ -2,7 +2,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { DragDropModule } from '@angular/cdk/drag-drop'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SecondShadowComponent } from './second-shadow/second-shadow.component';
@@ -31,7 +31,8 @@ import { PageAComponent } from './page-a/page-a.component';
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule 
+    MatNativeDateModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -40,6 +40,10 @@ export class SecondShadowComponent implements OnInit {
     this.bold.nativeElement.innerText = 'The text is clicked'; 
   }
 
+  onDbClick() {
+    this.bold.nativeElement.innerText = 'The text is double clicked'; 
+  }
+
   over() {
     this.bold.nativeElement.innerText = 'The text is hover'; 
   }
