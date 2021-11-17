@@ -52,6 +52,16 @@ export class SecondShadowComponent implements OnInit {
     this.bold.nativeElement.innerText = 'The text is right click'; 
   }
 
+  onDownload() {
+    const link = document.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', 'https://file-examples-com.github.io/uploads/2017/10/file-example_PDF_1MB.pdf');
+    link.setAttribute('download', `download`);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
+
   onSubmit() {
     this.resultCars = this.formSecond.controls.cars.value;
     this.resultRadio = this.formSecond.controls.radio.value;

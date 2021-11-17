@@ -78,6 +78,25 @@
 			  <button (mouseover)='over()'>Hover</button>
 			  <button (contextmenu)="onRightClick($event)">Right Click</button>
 				<button (dblclick)="onDbClick()">Double Click</button>
+				<a target="_blank" href="https://file-examples-com.github.io/uploads/2017/10/file-example_PDF_1MB.pdf" download>
+          Link download
+        </a>
+          
+        <button (click)="onDownload()">
+          Button download
+        </button>
+				<table id="customers">
+					<tr>
+						<th>Company</th>
+						<th>Contact</th>
+						<th>Country</th>
+					</tr>
+					<tr>
+						<td>Alfreds Futterkiste</td>
+						<td>Maria Anders</td>
+						<td>Germany</td>
+					</tr>
+				</table>
 			</div>
 			<div class="example-box" cdkDrag>
 				Drag second shadow root      

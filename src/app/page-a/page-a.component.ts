@@ -22,6 +22,7 @@ export class PageAComponent implements OnInit {
   resultText = '';
   resultTime = '';
   resultDate = '';
+
   constructor(
     private formBuilder: FormBuilder
   ){}
@@ -51,6 +52,16 @@ export class PageAComponent implements OnInit {
 
   onRightClick(event: MouseEvent) {
     this.bold.nativeElement.innerText = 'The text is right click'; 
+  }
+
+  onDownload() {
+    const link = document.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', 'https://file-examples-com.github.io/uploads/2017/10/file-example_PDF_1MB.pdf');
+    link.setAttribute('download', `download`);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
   }
 
   onSubmit() {
