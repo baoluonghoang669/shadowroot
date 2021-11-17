@@ -92,3 +92,24 @@ img {
 		background-color: #04AA6D;
 		color: white;
 	}
+
+	.custom-scroll {
+		color: green;
+		text-align: center;
+		font-size: 30px;
+		padding: 20px;
+	}
+
+	.color-red {
+		color: red;
+		text-align: center;
+		font-size: 30px;
+		padding: 20px;
+	}
+
+	.color-blue {
+		color: blue;
+		text-align: center;
+		font-size: 30px;
+		padding: 20px;
+	}

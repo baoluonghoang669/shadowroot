@@ -1,6 +1,6 @@
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { FormControl, FormArray } from '@angular/forms';
-import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-page-a',
@@ -10,6 +10,7 @@ import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@an
 })
 export class PageAComponent implements OnInit {
   @ViewChild('bold', {static: true}) bold: ElementRef;
+  @ViewChild('scroll', {static: true}) scroll: ElementRef;
   form: FormGroup;
   checks: any = [
     {description: 'Bike', value: 'bike'},
@@ -36,6 +37,19 @@ export class PageAComponent implements OnInit {
       time: [''],
       date: ['']
     });
+    window.onscroll = () => {
+      this.onScroll();
+    }
+  }
+
+  onScroll() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+      this.scroll.nativeElement.innerHTML = 'Scroll over 500px to show text';
+      this.scroll.nativeElement.className = 'color-red';
+    } else {
+      this.scroll.nativeElement.innerHTML = 'Scroll down 500px to hide text';
+      this.scroll.nativeElement.className = 'color-blue';
+    }
   }
 
   onClick() {
