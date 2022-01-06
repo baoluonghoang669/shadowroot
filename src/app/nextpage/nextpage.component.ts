@@ -1,3 +1,4 @@
+import { data_table } from './../shared/smart-table-settings';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nextpage.component.css']
 })
 export class NextpageComponent implements OnInit {
-
+  dataTable = data_table;
+  pageStart = 0;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  nextData() {
+    this.pageStart += 5; // Get the next 5 records
+  }
+
+  prevData() {
+    this.pageStart -= 5; // Get the previous 5 records
+  }
 }

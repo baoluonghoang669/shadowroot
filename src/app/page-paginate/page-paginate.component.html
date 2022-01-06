@@ -1,1 +1,20 @@
-<p>page-paginate works!</p>
+<div id="table-component">
+	<p>Popular Muscle Cars</p>
+	<table>
+		<thead>
+			<tr>
+				<th class="pl-15">Id</th>
+				<th>Title</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let item of dataTable | paginate: { itemsPerPage: 5, currentPage: pageIndex }">
+				<td class="pl-15">{{item.id}}</td>
+				<td>{{item.title}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="pagination">
+		<pagination-controls (pageChange)="onChange($event)"></pagination-controls>
+	</div>
+</div>

@@ -1,3 +1,4 @@
+import { data_table } from './../shared/smart-table-settings';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-loadmore.component.css']
 })
 export class PageLoadmoreComponent implements OnInit {
-
+  dataTable = data_table;
+  n = 5;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onLoadMore() {
+    this.n = this.n + 5;
+  }
 }
