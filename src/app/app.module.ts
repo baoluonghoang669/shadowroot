@@ -14,6 +14,11 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { PageBComponent } from './page-b/page-b.component';
 import { PageCComponent } from './page-c/page-c.component';
 import { PageAComponent } from './page-a/page-a.component';
+import { LoadmoreComponent } from './loadmore/loadmore.component';
+import { PageScrollComponent } from './page-scroll/page-scroll.component';
+import { PageLoadmoreComponent } from './page-loadmore/page-loadmore.component';
+import { NextpageComponent } from './nextpage/nextpage.component';
+import { PagePaginateComponent } from './page-paginate/page-paginate.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +27,11 @@ import { PageAComponent } from './page-a/page-a.component';
     PageBComponent,
     PageCComponent,
     PageAComponent,
+    LoadmoreComponent,
+    PageScrollComponent,
+    PageLoadmoreComponent,
+    NextpageComponent,
+    PagePaginateComponent,
   ],
   imports: [
     BrowserModule,
