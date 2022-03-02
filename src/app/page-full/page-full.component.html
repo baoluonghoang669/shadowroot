@@ -1,0 +1,116 @@
+
+<div class="first-shadow d-flex justify-content-center">
+  <h1 class="text-center">Page Full</h1>
+  <div class="custom-flex">
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+      <label for="cars">Choose a car:</label>
+
+      <select name="cars" id="cars" formControlName="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+      <br>
+
+      <input type="radio" id="html" name="radio" value="html" formControlName="radio">
+      <label for="html">HTML</label><br>
+      <input type="radio" id="css" name="radio" value="css" formControlName="radio">
+      <label for="css">CSS</label><br>
+      <input type="radio" id="javascript" name="radio" value="javascript" formControlName="radio">
+      <label for="javascript">JavaScript</label>
+      <br>
+
+      <div *ngFor="let choice of checks; let i=index">
+        <label>
+          <input type="checkbox" [value]="choice.value" (change)="onCheckChange($event)">
+          {{choice.description}}
+        </label>
+      </div>
+      <label for="text">Text</label>
+      <input type="text" name="text" value="text" formControlName="text">
+      <br>
+      <label for="time">DateTime</label>
+      <input type="datetime-local" name="time" value="time" formControlName="time">
+      <br>
+      <br>
+      <mat-label>Choose a date: </mat-label>
+      <mat-form-field appearance="fill">
+        <input matInput [matDatepicker]="picker" formControlName="date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <img src="https://images.pond5.com/casinos-and-beach-photo-099450046_iconl.jpeg" alt="img">
+  
+      <div class="result">
+        SelectBox: {{ resultCars }}
+        <br>
+        RadioButton: {{ resultRadio }}
+        <br>
+        CheckBox: {{ resultChoices }}
+        <br>
+        Text: {{ resultText }}
+        <br>
+        DateTime: {{ resultTime }}
+        <br>
+        Date: {{ resultDate }}
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+    <div>
+      <p #bold>This text is empty</p>
+      <a href="url">Link url</a>
+
+      <textarea id="w3review" name="w3review" rows="4" cols="50">
+        At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+      </textarea>
+
+      <label for="avatar">Choose a profile picture:</label>
+      <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+
+      <div class="scroll-element">
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        </p>
+      </div>
+
+      <button (click)="onClick()">Click</button>
+      <button (mouseover)='over()'>Hover</button>
+      <button (contextmenu)="onRightClick($event)">Right Click</button>
+      <button (dblclick)="onDbClick()">Double Click</button>
+      <a target="_blank" href="https://file-examples-com.github.io/uploads/2017/10/file-example_PDF_1MB.pdf" download>
+        Link download
+      </a>
+        
+      <button (click)="onDownload()">
+        Button download
+      </button>
+      <table id="customers">
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+      </table>
+    </div>
+    <div class="example-box" cdkDrag>
+      Drag first shadow root      
+    </div>
+  </div>
+  <div>
+    <ul>
+      <li><a href="#company">List company</a></li>
+      <li><a href="#apartment">List apartment</a></li>
+      <li><a href="#car">List house</a></li>
+    </ul>
+  </div>
+  <div #scroll class="custom-scroll">
+    Scroll to show information here !
+  </div>
+  <app-page-a></app-page-a>
+</div>

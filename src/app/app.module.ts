@@ -19,6 +19,7 @@ import { PageScrollComponent } from './page-scroll/page-scroll.component';
 import { SecondShadowComponent } from './second-shadow/second-shadow.component';
 import { ThirdShadowComponent } from './third-shadow/third-shadow.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { PageFullComponent } from './page-full/page-full.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     PageLoadmoreComponent,
     NextpageComponent,
     PagePaginateComponent,
+    PageFullComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { PageFullComponent } from './page-full/page-full.component';
 import { PageAComponent } from './page-a/page-a.component';
 import { PageCComponent } from './page-c/page-c.component';
 import { PageBComponent } from './page-b/page-b.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'page-a', component: PageAComponent},
   {path: 'page-b', component: PageBComponent},
   {path: 'page-c', component: PageCComponent},
+  {path: 'page-full', component: PageFullComponent},
   {path: 'page-loadmore', component: PageLoadmoreComponent},
   {path: 'page-scroll', component: PageScrollComponent},
   {path: 'nextpage', component: NextpageComponent},
