@@ -1,3 +1,4 @@
+import { DragDropListComponent } from './shared/drag-drop-list.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -33,6 +34,7 @@ import { PageFullComponent } from './page-full/page-full.component';
     NextpageComponent,
     PagePaginateComponent,
     PageFullComponent,
+    DragDropListComponent
   ],
   imports: [
     BrowserModule,

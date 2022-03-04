@@ -1,6 +1,5 @@
 import { FormControl, FormArray, FormBuilder, FormGroup } from '@angular/forms';
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-
 @Component({
   selector: 'app-page-full',
   templateUrl: './page-full.component.html',
