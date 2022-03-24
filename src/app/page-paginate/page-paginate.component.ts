@@ -1,10 +1,11 @@
 import { data_table } from './../shared/smart-table-settings';
-import { Component, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, OnInit, Output, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-page-paginate',
   templateUrl: './page-paginate.component.html',
-  styleUrls: ['./page-paginate.component.scss']
+  styleUrls: ['./page-paginate.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class PagePaginateComponent implements OnInit {
   dataTable = data_table;

@@ -1,10 +1,11 @@
 import { data_table } from './../shared/smart-table-settings';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-nextpage',
   templateUrl: './nextpage.component.html',
-  styleUrls: ['./nextpage.component.css']
+  styleUrls: ['./nextpage.component.css'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class NextpageComponent implements OnInit {
   dataTable = data_table;
