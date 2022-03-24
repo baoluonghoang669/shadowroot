@@ -41,19 +41,26 @@
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
       <img src="https://images.pond5.com/casinos-and-beach-photo-099450046_iconl.jpeg" alt="img">
-  
+
       <div class="result">
-        SelectBox: {{ resultCars }}
-        <br>
-        RadioButton: {{ resultRadio }}
-        <br>
-        CheckBox: {{ resultChoices }}
-        <br>
-        Text: {{ resultText }}
-        <br>
-        DateTime: {{ resultTime }}
-        <br>
-        Date: {{ resultDate }}
+        <strong>
+          SelectBox: {{ resultCars }}<br>
+        </strong>
+        <strong>
+          RadioButton: {{ resultRadio }}<br>
+        </strong>
+        <strong>
+          CheckBox: {{ resultChoices }}<br>
+        </strong>
+        <strong>
+          Text: {{ resultText }}<br>
+        </strong>
+        <strong>
+          DateTime: {{ resultTime }}<br>
+        </strong>
+        <strong>
+          Date: {{ resultDate }}
+        </strong>
       </div>
       <button type="submit" class="btn btn-success">Submit</button>
     </form>
@@ -81,7 +88,7 @@
       <a target="_blank" href="https://file-examples-com.github.io/uploads/2017/10/file-example_PDF_1MB.pdf" download>
         Link download
       </a>
-        
+
       <button (click)="onDownload()">
         Button download
       </button>
@@ -100,7 +107,7 @@
       <app-drag-drop-list></app-drag-drop-list>
     </div>
     <div class="example-box1" cdkDrag>
-      Drag first shadow root      
+      Drag first shadow root
     </div>
   </div>
   <div>
