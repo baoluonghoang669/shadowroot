@@ -9,7 +9,7 @@ import { Component, HostListener, OnInit, ViewEncapsulation } from '@angular/cor
 })
 export class PageScrollComponent implements OnInit {
   dataTable = data_table;
-  n = 25;
+  n = 30;
   element: any;
 
   constructor() { }
