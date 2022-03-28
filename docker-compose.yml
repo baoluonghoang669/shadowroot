@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  web:
+    container_name: shadow_root_angular
+    build: .
+    command: /bin/sh -c "ng s --host 0.0.0.0 --port 4200"
+    ports:
+      - 4201:4200
+    volumes:
+      - .:/var/www/shadow-root-prj
+      - /web/node_modules
+    stdin_open: true
+    tty: true
