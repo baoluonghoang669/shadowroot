@@ -13,7 +13,7 @@ export class NextpageComponent implements OnInit {
   pageStart = 0;
   currentPage = 1;
   constructor(private route: ActivatedRoute, private router: Router) {
-    this.currentPage = parseInt(this.route.snapshot.paramMap.get('page') || '1');
+    this.currentPage = parseInt(this.route.snapshot.queryParams['page'] || '1');
   }
 
   ngOnInit(): void {
@@ -21,10 +21,14 @@ export class NextpageComponent implements OnInit {
   }
 
   nextData() {
-    this.router.navigateByUrl(`/nextpage?page=${this.currentPage + 1}`);
+    this.pageStart += 5;
+    this.currentPage++;
+    this.router.navigateByUrl(`/nextpage?page=${this.currentPage}`);
   }
 
   prevData() {
-    this.router.navigateByUrl(`/nextpage?page=${this.currentPage - 1}`);
+    this.pageStart -= 5;
+    this.currentPage--;
+    this.router.navigateByUrl(`/nextpage?page=${this.currentPage}`);
   }
 }
