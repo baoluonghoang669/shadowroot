@@ -1,5 +1,6 @@
 import { data_table } from './../shared/smart-table-settings';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nextpage',
@@ -10,16 +11,20 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 export class NextpageComponent implements OnInit {
   dataTable = data_table;
   pageStart = 0;
-  constructor() { }
+  currentPage = 1;
+  constructor(private route: ActivatedRoute, private router: Router) {
+    this.currentPage = parseInt(this.route.snapshot.paramMap.get('page') || '1');
+  }
 
   ngOnInit(): void {
+    this.pageStart = (this.currentPage - 1)*5;
   }
 
   nextData() {
-    this.pageStart += 5; // Get the next 5 records
+    this.router.navigateByUrl(`/nextpage?page=${this.currentPage + 1}`);
   }
 
   prevData() {
-    this.pageStart -= 5; // Get the previous 5 records
+    this.router.navigateByUrl(`/nextpage?page=${this.currentPage - 1}`);
   }
 }
