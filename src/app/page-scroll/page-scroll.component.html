@@ -1,12 +1,16 @@
 <table>
-  <tr>
-    <th>STT</th>
-    <th>Title</th>
-  </tr>
-  <tr *ngFor="let item of dataTable.slice(0, n)">
-    <td>{{item.id}}</td>
-    <td>{{item.title}}</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of dataTable.slice(0, n)">
+      <td>{{item.id}}</td>
+      <td>{{item.title}}</td>
+    </tr>
+  </tbody>
 </table>
 <div *ngIf="checkIsScroll && n < dataTable.length">
   ...

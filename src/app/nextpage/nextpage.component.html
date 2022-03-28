@@ -1,12 +1,16 @@
 <table>
-  <tr>
-    <th>STT</th>
-    <th>Title</th>
-  </tr>
-  <tr *ngFor="let item of dataTable | slice:pageStart:pageStart + 5">
-    <td>{{item.id}}</td>
-    <td>{{item.title}}</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of dataTable | slice:pageStart:pageStart + 5">
+      <td>{{item.id}}</td>
+      <td>{{item.title}}</td>
+    </tr>
+  </tbody>
 </table>
 <button [disabled]="pageStart < 5" (click)="prevData()">Previous</button>
 <button [disabled]="pageStart >= dataTable.length - 5" (click)="nextData()">Next</button>
