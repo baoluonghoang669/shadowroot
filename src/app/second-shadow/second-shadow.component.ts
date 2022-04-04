@@ -37,19 +37,19 @@ export class SecondShadowComponent implements OnInit {
   }
 
   onClick() {
-    this.bold.nativeElement.innerText = 'The text is clicked'; 
+    this.bold.nativeElement.innerText = 'The text is clicked';
   }
 
   onDbClick() {
-    this.bold.nativeElement.innerText = 'The text is double clicked'; 
+    this.bold.nativeElement.innerText = 'The text is double clicked';
   }
 
   over() {
-    this.bold.nativeElement.innerText = 'The text is hover'; 
+    this.bold.nativeElement.innerText = 'The text is hover';
   }
 
   onRightClick(event: MouseEvent) {
-    this.bold.nativeElement.innerText = 'The text is right click'; 
+    this.bold.nativeElement.innerText = 'The text is right click';
   }
 
   onDownload() {
@@ -63,12 +63,12 @@ export class SecondShadowComponent implements OnInit {
   }
 
   onSubmit() {
-    this.resultCars = this.formSecond.controls.cars.value;
-    this.resultRadio = this.formSecond.controls.radio.value;
-    this.resultChoices = this.formSecond.controls.myChoices.value;
-    this.resultText = this.formSecond.controls.text.value;
-    this.resultTime = this.formSecond.controls.time.value;
-    this.resultDate = this.formSecond.controls.date.value;
+    this.resultCars = this.formSecond.controls.cars.value || '_____empty_____';
+    this.resultRadio = this.formSecond.controls.radio.value || '_____empty_____';
+    this.resultChoices = this.formSecond.controls.myChoices.value || '_____empty_____';
+    this.resultText = this.formSecond.controls.text.value || '_____empty_____';
+    this.resultTime = this.formSecond.controls.time.value || '_____empty_____';
+    this.resultDate = this.formSecond.controls.date.value || '_____empty_____';
   }
 
   onCheckChange(event: any) {

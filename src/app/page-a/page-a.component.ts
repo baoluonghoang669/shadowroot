@@ -53,19 +53,19 @@ export class PageAComponent implements OnInit {
   }
 
   onClick() {
-    this.bold.nativeElement.innerText = 'The text is clicked'; 
+    this.bold.nativeElement.innerText = 'The text is clicked';
   }
 
   onDbClick() {
-    this.bold.nativeElement.innerText = 'The text is double clicked'; 
+    this.bold.nativeElement.innerText = 'The text is double clicked';
   }
 
   over() {
-    this.bold.nativeElement.innerText = 'The text is hover'; 
+    this.bold.nativeElement.innerText = 'The text is hover';
   }
 
   onRightClick(event: MouseEvent) {
-    this.bold.nativeElement.innerText = 'The text is right click'; 
+    this.bold.nativeElement.innerText = 'The text is right click';
   }
 
   onDownload() {
@@ -79,12 +79,12 @@ export class PageAComponent implements OnInit {
   }
 
   onSubmit() {
-    this.resultCars = this.form.controls.cars.value;
-    this.resultRadio = this.form.controls.radio.value;
-    this.resultChoices = this.form.controls.myChoices.value;
-    this.resultText = this.form.controls.text.value;
-    this.resultTime = this.form.controls.time.value;
-    this.resultDate = this.form.controls.date.value;
+    this.resultCars = this.form.controls.cars.value || '_____empty_____';
+    this.resultRadio = this.form.controls.radio.value || '_____empty_____';
+    this.resultChoices = this.form.controls.myChoices.value || '_____empty_____';
+    this.resultText = this.form.controls.text.value || '_____empty_____';
+    this.resultTime = this.form.controls.time.value || '_____empty_____';
+    this.resultDate = this.form.controls.date.value || '_____empty_____';
   }
 
   onCheckChange(event: any) {
