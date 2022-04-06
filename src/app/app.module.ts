@@ -21,6 +21,8 @@ import { SecondShadowComponent } from './second-shadow/second-shadow.component';
 import { ThirdShadowComponent } from './third-shadow/third-shadow.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PageFullComponent } from './page-full/page-full.component';
+import { DropFileComponent } from './drop-file/drop-file.component';
+import { DndDirective } from './dnd.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import { PageFullComponent } from './page-full/page-full.component';
     NextpageComponent,
     PagePaginateComponent,
     PageFullComponent,
-    DragDropListComponent
+    DragDropListComponent,
+    DropFileComponent,
+    DndDirective
   ],
   imports: [
     BrowserModule,

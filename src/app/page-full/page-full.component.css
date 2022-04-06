@@ -63,7 +63,7 @@ img {
 				0 2px 2px 0 rgba(0, 0, 0, 0.14),
 				0 1px 5px 0 rgba(0, 0, 0, 0.12);
   }
-  
+
   .example-box1:active {
 	box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
 				0 8px 10px 1px rgba(0, 0, 0, 0.14),
@@ -75,16 +75,16 @@ img {
 		border-collapse: collapse;
 		width: 100%;
 	}
-	
+
 	#customers td, #customers th {
 		border: 1px solid #ddd;
 		padding: 8px;
 	}
-	
+
 	#customers tr:nth-child(even){background-color: #f2f2f2;}
-	
+
 	#customers tr:hover {background-color: #ddd;}
-	
+
 	#customers th {
 		padding-top: 12px;
 		padding-bottom: 12px;

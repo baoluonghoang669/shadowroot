@@ -1,0 +1,12 @@
+.dropUpload {
+  height: 100px;
+  border: 1px solid red;
+  text-align: center;
+}
+
+.dropUpload.fileover {
+  border-color: #04AA6D !important;
+}
+.dropUpload.filedroped {
+  border-color: blueviolet;
+}
