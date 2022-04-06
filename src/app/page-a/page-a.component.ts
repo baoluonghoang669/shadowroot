@@ -71,7 +71,7 @@ export class PageAComponent implements OnInit {
   onDownload() {
     const link = document.createElement('a');
     link.setAttribute('target', '_blank');
-    link.setAttribute('href', 'https://file-examples-com.github.io/uploads/2017/10/file-example_PDF_1MB.pdf');
+    link.setAttribute('href', 'https://stats.govt.nz/assets/Uploads/Annual-enterprise-survey/Annual-enterprise-survey-2020-financial-year-provisional/Download-data/annual-enterprise-survey-2020-financial-year-provisional-csv.csv');
     link.setAttribute('download', `download`);
     document.body.appendChild(link);
     link.click();
